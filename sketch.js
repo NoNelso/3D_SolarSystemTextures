@@ -1,11 +1,31 @@
+//planet textures pulled from http://planetpixelemporium.com
+
 var camON = false; // cam normaly stationary
+
+PImage suntxt, strtxt;
+PImage plntxt = new PImage[5];
+PImage montxt = new PImage[2];
 
 function setup() {
   createCanvas(600, 500, WEBGL);
   // debugMode(AXES);
+
+  //load images for planets and background
+  strtxt = loadimage("starfield.jpg");
+  suntxt = loadImage("sun.jpg");
+  plntxt[0] = loadImage("earth.jpg");
+  plntxt[1] = loadImage("earthcloud.jpg");
+  plntxt[2] = loadImage("earthnight.jpg");
+  plntxt[3] = loadImage("jupiter.jpg");
+  plntxt[4] = loadImage("mars.jpg");
+  montxt[0] = loadImage("moon.jpg");
+  montxt[5] = loadImage("pluto.jpg");
+
   //create circle with
-  //radius 45, dist from center 0, rotationspeed 0, angle 0, level 1, yellow, no wobble
-  sun = new Planet(45, 0, 0, 0, 1, color(200, 100, 20), 0, createVector(0, 1, 0));
+  //radius 45, dist from center 0, rotationspeed 0, angle 0, level 1,
+  //yellow, no wobble
+  sun = new Planet(45, 0, 0, 0, 1, color(200, 100, 20), 0,
+    createVector(0, 1, 0));
   //create 5 rotating bodies about sun with depth of spawn 1
   sun.spawnSpiners(3, 1);
   console.log("sun", sun);
