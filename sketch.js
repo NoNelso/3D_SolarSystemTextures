@@ -7,22 +7,21 @@ let strtxt = null;
 let plntxt[5] = [null, null, null, null, null];
 let montxt[2] = [null, null];
 
+function preload() {
+  //load images for planets and background
+  strtxt = loadImage("Textures/starfield.jpg");
+  suntxt = loadImage("Textures/sun.jpg");
+  plntxt[0] = loadImage("Textures/earth.jpg");
+  plntxt[1] = loadImage("Textures/earthcloud.jpg");
+  plntxt[2] = loadImage("Textures/earthnight.jpg");
+  plntxt[3] = loadImage("Textures/jupiter.jpg");
+  plntxt[4] = loadImage("Textures/mars.jpg");
+  montxt[0] = loadImage("Textures/moon.jpg");
+  montxt[1] = loadImage("Textures/pluto.jpg");
+}
 
 function setup() {
   createCanvas(600, 500, WEBGL);
-  // debugMode(AXES);
-
-  //load images for planets and background
-  strtxt = loadImage('textures/starfield.jpg');
-  suntxt = loadImage('textures/sun.jpg');
-  plntxt[0] = loadImage('textures/earth.jpg');
-  plntxt[1] = loadImage('textures/earthcloud.jpg');
-  plntxt[2] = loadImage('textures/earthnight.jpg');
-  plntxt[3] = loadImage('textures/jupiter.jpg');
-  plntxt[4] = loadImage('textures/mars.jpg');
-  montxt[0] = loadImage('textures/moon.jpg');
-  montxt[1] = loadImage('textures/pluto.jpg');
-
   //create circle with
   //radius 45, dist from center 0, rotationspeed 1, angle 0, level 1,
   //no wobble, rotational axis (x=z=0,y=1), texture sun)
