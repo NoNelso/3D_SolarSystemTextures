@@ -19,7 +19,7 @@ function setup() {
   plntxt[3] = loadImage("jupiter.jpg");
   plntxt[4] = loadImage("mars.jpg");
   montxt[0] = loadImage("moon.jpg");
-  montxt[5] = loadImage("pluto.jpg");
+  montxt[1] = loadImage("pluto.jpg");
 
   //create circle with
   //radius 45, dist from center 0, rotationspeed 1, angle 0, level 1,
