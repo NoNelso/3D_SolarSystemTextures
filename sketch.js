@@ -2,10 +2,11 @@
 
 var camON = false; // cam normaly stationary
 
-PImage suntxt;
-PImage strtxt;
-PImage plntxt = new PImage[5];
-PImage montxt = new PImage[2];
+let suntxt;
+let strtxt;
+let plntxt[5];
+let montxt[2];
+
 
 function setup() {
   createCanvas(600, 500, WEBGL);
