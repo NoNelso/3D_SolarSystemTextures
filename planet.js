@@ -45,7 +45,7 @@ function Planet(radius, distance, speed, angle, level, wobble,
       if (lev == 2) let texture = random(plntxt);
       else if (lev == 3) let texture = random(montxt);
       //add new orbiting dependant to dependants array
-      this.planets.push(new Planet(rad, dis, spd, ang, lev, col, 1, vec));
+      this.planets.push(new Planet(rad, dis, spd, ang, lev, 1, vec, texture));
       //if level of new dependant is not at the level cap, spawn again
       if (lv < 3) {
         this.planets[j].spawnSpiners(-1 + childNum, 1 + lv);
