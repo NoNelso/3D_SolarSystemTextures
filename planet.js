@@ -41,11 +41,12 @@ function Planet(radius, distance, speed, angle, level, wobble,
       //give random vector to orbit about
       let vec = p5.Vector.random3D();
       //assign random texture from pool assigned based on level
-      if (lev == 1) let texture = suntxt;
-      if (lev == 2) let texture = random(plntxt);
-      else if (lev == 3) let texture = random(montxt);
+      let txt = null;
+      if (lev == 1) txt = suntxt;
+      if (lev == 2) txt = random(plntxt);
+      else if (lev == 3) txt = random(montxt);
       //add new orbiting dependant to dependants array
-      this.planets.push(new Planet(rad, dis, spd, ang, lev, 1, vec, texture));
+      this.planets.push(new Planet(rad, dis, spd, ang, lev, 1, vec, txt));
       //if level of new dependant is not at the level cap, spawn again
       if (lv < 3) {
         this.planets[j].spawnSpiners(-1 + childNum, 1 + lv);
