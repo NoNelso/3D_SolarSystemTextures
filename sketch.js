@@ -1,4 +1,6 @@
 //planet textures pulled from http://planetpixelemporium.com
+//still getting errors for texture import blocked due to datatype mismatch
+//somehow P5.JS loadImage doesn't support images... ???
 
 var camON = false; // cam normaly stationary
 
