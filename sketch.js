@@ -2,10 +2,10 @@
 
 var camON = false; // cam normaly stationary
 
-let suntxt;
-let strtxt;
-let plntxt[5];
-let montxt[2];
+let suntxt = null;
+let strtxt = null;
+let plntxt[5] = [null, null, null, null, null];
+let montxt[2] = [null, null];
 
 
 function setup() {
