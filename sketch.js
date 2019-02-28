@@ -2,7 +2,8 @@
 
 var camON = false; // cam normaly stationary
 
-PImage suntxt, strtxt;
+PImage suntxt;
+PImage strtxt;
 PImage plntxt = new PImage[5];
 PImage montxt = new PImage[2];
 
