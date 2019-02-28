@@ -10,8 +10,6 @@ function Planet(radius, distance, speed, angle, level, wobble,
   this.v = vect;
   this.planets = [];
   this.t = txtr;
-  noStroke();
-  nofill();
   this.globe = createShape(SPHERE, this.r);
   this.globe.setTexture(this.t);
 

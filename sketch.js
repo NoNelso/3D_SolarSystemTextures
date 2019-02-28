@@ -4,8 +4,8 @@ var camON = false; // cam normaly stationary
 
 let suntxt = null;
 let strtxt = null;
-let plntxt[5] = [null, null, null, null, null];
-let montxt[2] = [null, null];
+let plntxt = [null, null, null, null, null];
+let montxt = [null, null];
 
 function preload() {
   //load images for planets and background
@@ -35,6 +35,9 @@ function setup() {
   pointLight(sunny, -sun.r, 0, 0);
   pointLight(sunny, 0, -sun.r, 0);
   pointLight(sunny, 0, 0, -sun.r);
+
+  noStroke();
+  noFill();
 
   //create 5 rotating bodies about sun with depth of spawn 1
   sun.spawnSpiners(3, 1);
