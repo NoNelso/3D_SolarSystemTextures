@@ -13,15 +13,15 @@ function setup() {
   // debugMode(AXES);
 
   //load images for planets and background
-  strtxt = loadimage("starfield.jpg");
-  suntxt = loadImage("sun.jpg");
-  plntxt[0] = loadImage("earth.jpg");
-  plntxt[1] = loadImage("earthcloud.jpg");
-  plntxt[2] = loadImage("earthnight.jpg");
-  plntxt[3] = loadImage("jupiter.jpg");
-  plntxt[4] = loadImage("mars.jpg");
-  montxt[0] = loadImage("moon.jpg");
-  montxt[1] = loadImage("pluto.jpg");
+  strtxt = loadImage('textures/starfield.jpg');
+  suntxt = loadImage('textures/sun.jpg');
+  plntxt[0] = loadImage('textures/earth.jpg');
+  plntxt[1] = loadImage('textures/earthcloud.jpg');
+  plntxt[2] = loadImage('textures/earthnight.jpg');
+  plntxt[3] = loadImage('textures/jupiter.jpg');
+  plntxt[4] = loadImage('textures/mars.jpg');
+  montxt[0] = loadImage('textures/moon.jpg');
+  montxt[1] = loadImage('textures/pluto.jpg');
 
   //create circle with
   //radius 45, dist from center 0, rotationspeed 1, angle 0, level 1,
