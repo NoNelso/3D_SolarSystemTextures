@@ -43,12 +43,15 @@ function setup() {
 }
 
 function draw() {
-  background(21); //black space
-  let camX = map(mouseX, 0, width, -600, 600);
-  let camY = map(mouseY, 0, height, -500, 500);
+  //starry space
+  background(strtxt);
+  //if active cam off don't calculate mouse x & y
   if (!camON) {
     camX = 0;
     camY = 0;
+  } else {
+    let camX = map(mouseX, 0, width, -600, 600);
+    let camY = map(mouseY, 0, height, -500, 500);
   }
   let camZ = (height / 2) / tan(PI * 30 / 180);
   camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
