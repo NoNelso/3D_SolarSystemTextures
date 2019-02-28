@@ -10,8 +10,6 @@ function Planet(radius, distance, speed, angle, level, wobble,
   this.v = vect;
   this.planets = [];
   this.t = txtr;
-  this.globe = createShape(SPHERE, this.r);
-  this.globe.setTexture(this.t);
 
   this.spin = function() {
     // base spin rate on speed
@@ -59,7 +57,8 @@ function Planet(radius, distance, speed, angle, level, wobble,
     push();
     rotate(this.a, this.v);
     translate(this.d, 0, 0);
-    shape(globe);
+    texture(this.t);
+    sphere(this.r);
     for (let k in this.planets) this.planets[k].show();
     pop();
   }
