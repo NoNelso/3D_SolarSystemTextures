@@ -26,6 +26,16 @@ function setup() {
   //radius 45, dist from center 0, rotationspeed 1, angle 0, level 1,
   //no wobble, rotational axis (x=z=0,y=1), texture sun)
   sun = new Planet(45, 0, 1, 0, 1, 0, createVector(0, 1, 0), suntxt);
+  //add 6 point lights evenly spaced about sun and at center
+  let sunny = color(255, 252, 127)
+  pointLight(sunny, 0, 0, 0);
+  pointLight(sunny, sun.r, 0, 0);
+  pointLight(sunny, 0, sun.r, 0);
+  pointLight(sunny, 0, 0, sun.r);
+  pointLight(sunny, -sun.r, 0, 0);
+  pointLight(sunny, 0, -sun.r, 0);
+  pointLight(sunny, 0, 0, -sun.r);
+
   //create 5 rotating bodies about sun with depth of spawn 1
   sun.spawnSpiners(3, 1);
   console.log("sun", sun);
@@ -41,7 +51,7 @@ function draw() {
   }
   let camZ = (height / 2) / tan(PI * 30 / 180);
   camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-  ambientLight(255);
+  ambientLight(100); //low ambien light to see all planets always
   sun.show(); //show solar system
   sun.spin(); //itterate solar system
 }
