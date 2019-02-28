@@ -55,7 +55,8 @@ function draw() {
   }
   let camZ = (height / 2) / tan(PI * 30 / 180);
   camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-  ambientLight(100); //low ambien light to see all planets always
+  //low ambien light to see all planets always
+  ambientLight(100);
   sun.show(); //show solar system
   sun.spin(); //itterate solar system
 }
